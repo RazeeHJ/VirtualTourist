@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MUf-Ar-lsM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Travel Locations View Controller-->
+        <scene sceneID="G1Z-02-U9z">
+            <objects>
+                <viewController id="MUf-Ar-lsM" customClass="TravelLocationsViewController" customModule="Virtual_Tourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ZK-9O-0aG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jdW-ol-uYo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QIV-x0-6QL" firstAttribute="trailing" secondItem="jdW-ol-uYo" secondAttribute="trailing" id="37V-ru-doe"/>
+                            <constraint firstItem="jdW-ol-uYo" firstAttribute="top" secondItem="QIV-x0-6QL" secondAttribute="top" constant="-44" id="Hbv-FB-UnL"/>
+                            <constraint firstItem="jdW-ol-uYo" firstAttribute="leading" secondItem="QIV-x0-6QL" secondAttribute="leading" id="eqo-NL-liN"/>
+                            <constraint firstItem="QIV-x0-6QL" firstAttribute="bottom" secondItem="jdW-ol-uYo" secondAttribute="bottom" constant="-34" id="rsg-mh-mEd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QIV-x0-6QL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lSO-2s-zaL"/>
+                    <connections>
+                        <outlet property="mapView" destination="jdW-ol-uYo" id="1um-L1-tsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mo7-8n-PLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.5" id="GF9-lg-uEZ">
+                    <connections>
+                        <outlet property="delegate" destination="MUf-Ar-lsM" id="xFc-JL-aBG"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="318.84057971014494" y="121.875"/>
+        </scene>
+        <!--PhotoAlbum-->
+        <scene sceneID="dKQ-GH-X2Z">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PhotoAlbumViewController" storyboardName="PhotoAlbum" id="7N1-V5-u2t" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bX4-ms-lga"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvq-7g-HKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="122"/>
+        </scene>
+    </scenes>
+</document>
